@@ -6,18 +6,21 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
       <div className={styles.logo}>
-        <h3>Foodify</h3>
+        <a href="/">Foodify</a>
       </div>
       <div className={styles.nav}>
-        <div className={styles.navitem}>
-          <BsTelephoneOutbound /> <span>123 456 665</span>
-          <a href="#"> To order</a>
+        <div>
+          <BsTelephoneOutbound
+            style={{ margin: "5px 5px 0px 0px", color: "#fff" }}
+          />{" "}
+          <span className={styles.number}>123 456 665</span>
+          <span className={styles.number}> To order</span>
         </div>
         <div className={styles.navitem}>
-          <a href="#">Home</a>
+          <a href="#">Specials</a>
         </div>
         <div className={styles.navitem}>
-          <a href="#">Home</a>
+          <a href="#">Contact us</a>
         </div>
       </div>
     </div>

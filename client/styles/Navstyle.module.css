@@ -2,7 +2,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: salmon;
+  background-color: #00001b;
+  min-height: 70px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-left: 3rem;
 }
 
 .nav {
@@ -11,6 +18,19 @@
   align-items: center;
 }
 
+.number {
+  color: #fff;
+  font-weight: semibold;
+  margin-right: 0.6rem;
+}
+
 .navitem {
-  margin: 0 4rem;
+  margin: 0 3rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: white;
+}
+
+.navitem:hover {
+  color: #4e4e4e;
 }
