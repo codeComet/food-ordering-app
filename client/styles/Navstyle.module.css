@@ -8,8 +8,8 @@
 
 .logo {
   color: #fff;
-  font-size: 1.3rem;
-  margin-left: 3rem;
+  font-size: 3rem;
+  font-family: "Lobster", cursive;
 }
 
 .nav {
@@ -24,7 +24,8 @@
   margin-right: 0.6rem;
 }
 
-.navitem {
+.navitem,
+.num_container {
   margin: 0 3rem;
   font-size: 1.1rem;
   font-weight: 500;
