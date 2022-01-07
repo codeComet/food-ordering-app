@@ -1,82 +1,41 @@
-import React, { useState, useRef, useEffect } from "react";
 import styles from "../styles/Hero.module.css";
-import { IoMdArrowRoundForward } from "react-icons/io";
-import { IoArrowForward, IoArrowBack } from "react-icons/io5";
+import { useState } from "react";
 import Image from "next/image";
+import {
+  BsFillArrowRightCircleFill,
+  BsFillArrowLeftCircleFill,
+} from "react-icons/bs";
 
 const Hero = () => {
-  const [current, setCurrent] = useState(0);
-  const timeOut = useRef(null);
-  const slider = [
-    {
-      image: "/img/2.jpg",
-      alt: "image",
-      label: "Food",
-      title: "biryani",
-      price: "$33",
-    },
-  ];
-  const length = slider.length;
+  const [slide, setSlide] = useState(0);
+  const images = ["/img/10.png", "/img/11.png", "/img/12.png", "/img/13.png"];
 
-  //   useEffect(() => {
-  //     const nextSlide = () => {
-  //       setCurrent((current) => (current === length - 1 ? 0 : current + 1));
-  //     };
-  //     timeOut.current = setTimeout(nextSlide, 3000);
-  //     return function () {
-  //       if (timeOut.current) {
-  //         clearTimeout(timeOut.current);
-  //       }
-  //     };
-  //   }, [current, length]);
-
-  const nextSlide = () => {
-    if (timeOut.current) {
-      clearTimeout(timeOut.current);
+  const handleArrowClick = (direction) => {
+    if (direction == "l") {
+      setSlide(slide !== 0 ? slide - 1 : 3);
+    } else {
+      setSlide(slide !== 3 ? slide + 1 : 0);
     }
-    setCurrent(current === length - 1 ? 0 : current + 1);
   };
-
-  const prevSlide = () => {
-    if (timeOut.current) {
-      clearTimeout(timeOut.current);
-    }
-    setCurrent(current === 0 ? length - 1 : current - 1);
-  };
-
-  if (!Array.isArray(slider) || slider.length <= 0) return null;
-
+  console.log(slide);
   return (
-    <div className={styles.HeroSection}>
-      <div className={styles.HeroWrapper}>
-        {slider.map((slide, idx) => {
-          return (
-            <div className={styles.HeroSlide} key={idx}>
-              {idx === current && (
-                <div className={styles.HeroSlider}>
-                  <Image
-                    className={styles.HeroImage}
-                    src={slide.image}
-                    alt={slide.alt}
-                    width="100%"
-                    height="100%"
-                  />
-                  <div className={styles.HeroContent}>
-                    <h1>{slide.title}</h1>
-                    <p>{slide.price}</p>
-                    <button className="contact-btn">
-                      {slide.label} <div className={styles.Arrow} />
-                    </button>
-                  </div>
-                </div>
-              )}
-            </div>
-          );
-        })}
-        <div className={styles.SliderButtons}>
-          <IoArrowBack className={styles.PrevArrow} onClick={prevSlide} />
-          <IoArrowForward className={styles.NextArrow} onClick={nextSlide} />
-        </div>
+    <div className={styles.container}>
+      <div className={styles.arrow}>
+        <BsFillArrowLeftCircleFill
+          style={{ marginRight: "10px" }}
+          onClick={() => handleArrowClick("l")}
+        />
+        <BsFillArrowRightCircleFill onClick={() => handleArrowClick("r")} />
+      </div>
+      <div
+        className={styles.wrapper}
+        style={{ transform: `translate(${-100 * slide}vw)` }}
+      >
+        {images.map((image, index) => (
+          <div className={styles.imgContainer} key={index}>
+            <Image src={image} layout="fill" objectFit="contain" />
+          </div>
+        ))}
       </div>
     </div>
   );
