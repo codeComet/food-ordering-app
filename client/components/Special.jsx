@@ -1,6 +1,6 @@
 import styles from "../styles/Special.module.css";
 import Item from "./Item";
-import Carousel from "react-grid-carousel";
+import { Carousel } from "@trendyol-js/react-carousel";
 
 const Special = () => {
   return (
@@ -14,42 +14,32 @@ const Special = () => {
         </p>
       </div>
       <div className={styles.special_container}>
-        <Carousel cols={5} rows={1} gap={0} loop>
-          <Carousel.Item>
-            <div className={styles.special_item}>
-              <Item />
-            </div>
-          </Carousel.Item>
-          <Carousel.Item>
-            <div className={styles.special_item}>
-              <Item />
-            </div>
-          </Carousel.Item>
-          <Carousel.Item>
-            <div className={styles.special_item}>
-              <Item />
-            </div>
-          </Carousel.Item>
-          <Carousel.Item>
-            <div className={styles.special_item}>
-              <Item />
-            </div>
-          </Carousel.Item>
-          <Carousel.Item>
-            <div className={styles.special_item}>
-              <Item />
-            </div>
-          </Carousel.Item>
-          <Carousel.Item>
-            <div className={styles.special_item}>
-              <Item />
-            </div>
-          </Carousel.Item>
-          <Carousel.Item>
-            <div className={styles.special_item}>
-              <Item />
-            </div>
-          </Carousel.Item>
+        <Carousel
+          show={4.5}
+          slide={5}
+          swiping={true}
+          transition={1}
+          useArrowKeys={true}
+          rightArrow={false}
+        >
+          <div className={styles.special_item}>
+            <Item />
+          </div>
+          <div className={styles.special_item}>
+            <Item />
+          </div>
+          <div className={styles.special_item}>
+            <Item />
+          </div>
+          <div className={styles.special_item}>
+            <Item />
+          </div>
+          <div className={styles.special_item}>
+            <Item />
+          </div>
+          <div className={styles.special_item}>
+            <Item />
+          </div>
         </Carousel>
       </div>
     </div>
