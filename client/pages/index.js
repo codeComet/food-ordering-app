@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import Hero from "../components/Hero";
+import Special from "../components/Special";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       </Head>
 
       <Hero />
+      <Special />
     </div>
   );
 }

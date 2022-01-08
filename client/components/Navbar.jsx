@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "../styles/Navstyle.module.css";
 import { BsTelephoneOutbound } from "react-icons/bs";
 import { MdOutlineShoppingCart } from "react-icons/md";
