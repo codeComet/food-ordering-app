@@ -16,11 +16,10 @@ const Special = () => {
       <div className={styles.special_container}>
         <Carousel
           show={4.5}
-          slide={5}
+          slide={1}
           swiping={true}
           transition={1}
-          useArrowKeys={true}
-          rightArrow={false}
+          className={styles.slider}
         >
           <div className={styles.special_item}>
             <Item />

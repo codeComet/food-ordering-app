@@ -23,3 +23,31 @@
   width: 90%;
   margin: 0 auto;
 }
+
+.slider > div:first-child,
+.slider > div:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.slider > div:first-child button,
+.slider > div:last-child button {
+  width: 30px;
+  height: 30px;
+  margin: 0 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.slider > div:first-child button::before {
+  content: "<";
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.slider > div:last-child button::before {
+  content: ">";
+  font-weight: bold;
+  font-size: 2.5rem;
+}

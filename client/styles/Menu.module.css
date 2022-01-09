@@ -1,0 +1,71 @@
+.container {
+  width: 100%;
+  padding: 20px;
+  margin: 20px auto;
+  background-color: #0c0c49;
+  color: white;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title h1 {
+  font-size: 2.5rem;
+  margin: 20px 10px;
+}
+
+.title span {
+  font-size: 2.5rem;
+  color: orangered;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menuItemTitle {
+  text-align: center;
+}
+
+.breakfastItem {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  transition: 300ms;
+  border-radius: 10px;
+}
+
+.breakfastItem h3 {
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.breakfastItem p {
+  font-size: 0.9rem;
+  color: rgb(167, 167, 167);
+  margin-top: 0px;
+}
+
+.price p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: yellow;
+  margin-bottom: 0px;
+}
+
+.breakfastItemDesc {
+  margin: 0px 10px;
+}
+
+.breakfastItem:hover {
+  cursor: pointer;
+  background-color: #ff000094;
+}
