@@ -5,7 +5,13 @@ const FoodItem = () => {
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
-        <Image src="/img/1.jpg" alt="food" width={300} height={300} />
+        <Image
+          src="/img/1.jpg"
+          alt="food"
+          width={300}
+          height={300}
+          objectFit="contain"
+        />
       </div>
       <div className={styles.infoContainer}>
         <div className={styles.foodInfo}>
