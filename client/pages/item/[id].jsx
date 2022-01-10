@@ -15,6 +15,10 @@ const FoodItem = () => {
         </p>
         <p>$10.00</p>
       </div>
+      <div className={styles.buttonContainer}>
+        <input type="number" />
+        <button>Add to Cart</button>
+      </div>
     </div>
   );
 };
