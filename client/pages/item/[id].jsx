@@ -7,7 +7,7 @@ const FoodItem = () => {
     <div className={styles.container}>
       <div className={styles.imgContainer}>
         <Image
-          src="/img/1.jpg"
+          src="/img/6.png"
           alt="food"
           width={300}
           height={300}
@@ -26,9 +26,17 @@ const FoodItem = () => {
         </div>
         <div className={styles.buttonContainer}>
           <div className={styles.qty}>
-            <HiPlus style={{ fontSize: "1.5rem", color: "limegreen" }} />
+            <HiMinus
+              style={{ fontSize: "1.5rem", color: "red", cursor: "pointer" }}
+            />
             <p>1</p>
-            <HiMinus style={{ fontSize: "1.5rem", color: "red" }} />
+            <HiPlus
+              style={{
+                fontSize: "1.5rem",
+                color: "limegreen",
+                cursor: "pointer",
+              }}
+            />
           </div>
           <button>Add to Cart</button>
         </div>
