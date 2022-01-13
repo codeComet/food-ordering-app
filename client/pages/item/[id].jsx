@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "../../styles/FoodItem.module.css";
+import { HiPlus, HiMinus } from "react-icons/hi";
 
 const FoodItem = () => {
   return (
@@ -24,7 +25,11 @@ const FoodItem = () => {
           <p>$10.00</p>
         </div>
         <div className={styles.buttonContainer}>
-          <input type="number" />
+          <div className={styles.qty}>
+            <HiPlus style={{ fontSize: "1.5rem", color: "limegreen" }} />
+            <p>1</p>
+            <HiMinus style={{ fontSize: "1.5rem", color: "red" }} />
+          </div>
           <button>Add to Cart</button>
         </div>
       </div>
