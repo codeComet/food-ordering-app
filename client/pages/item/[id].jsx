@@ -17,8 +17,9 @@ const FoodItem = () => {
         <div className={styles.foodInfo}>
           <h1>Food Name</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
-            numquam?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+            nesciunt quo vitae perspiciatis soluta id repudiandae facere magnam
+            dolor sint.
           </p>
           <p>$10.00</p>
         </div>
