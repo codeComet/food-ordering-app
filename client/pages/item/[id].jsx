@@ -25,20 +25,22 @@ const FoodItem = () => {
           <p>$10.00</p>
         </div>
         <div className={styles.buttonContainer}>
-          <div className={styles.qty}>
-            <HiMinus
-              style={{ fontSize: "1.5rem", color: "red", cursor: "pointer" }}
-            />
-            <p>1</p>
-            <HiPlus
-              style={{
-                fontSize: "1.5rem",
-                color: "limegreen",
-                cursor: "pointer",
-              }}
-            />
+          <div className={styles.qtyContainer}>
+            <div className={styles.qty}>
+              <HiMinus
+                style={{ fontSize: "1.5rem", color: "red", cursor: "pointer" }}
+              />
+              <p>1</p>
+              <HiPlus
+                style={{
+                  fontSize: "1.5rem",
+                  color: "limegreen",
+                  cursor: "pointer",
+                }}
+              />
+            </div>
+            <button>Add to Cart</button>
           </div>
-          <button>Add to Cart</button>
         </div>
       </div>
     </div>
