@@ -193,3 +193,40 @@
     margin: 20px 0;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .foodInfo p {
+    font-size: 1.1rem;
+    width: 100%;
+  }
+
+  .sizeItem {
+    margin: 0px 5px;
+  }
+
+  .extrasText:first-child {
+    margin-right: 3rem;
+  }
+
+  .addOns {
+    margin: 1.5rem 0px 0px 0px;
+  }
+
+  .addOnItem {
+    margin-right: 10px;
+  }
+
+  .qtyContainer {
+    margin-top: 1.5rem;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .qty {
+    flex-direction: row;
+  }
+
+  .qty p {
+    margin: 0 2rem;
+  }
+}
