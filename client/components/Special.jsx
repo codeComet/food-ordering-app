@@ -19,6 +19,7 @@ const Special = () => {
           slide={1}
           swiping={true}
           transition={1}
+          responsive={true}
           className={styles.slider}
         >
           <div className={styles.special_item}>

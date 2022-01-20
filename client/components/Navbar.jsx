@@ -43,6 +43,12 @@ const Navbar = () => {
             <div className={styles.item_count}>2</div>
           </div>
         </div>
+        <div className={styles.navitemMbl}>
+          <MdOutlineShoppingCart
+            style={{ color: "#fff", fontSize: "1.6rem" }}
+          />
+          <div className={styles.item_countMbl}>2</div>
+        </div>
       </>
     </div>
   );

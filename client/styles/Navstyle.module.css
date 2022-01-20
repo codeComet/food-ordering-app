@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #00001b;
+  background-color: red;
   min-height: 70px;
   position: sticky;
   top: 0;
@@ -14,6 +14,9 @@
   font-size: 3rem;
   margin-left: -1rem;
   font-family: "Lobster", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav {
@@ -46,7 +49,8 @@
   position: relative;
 }
 
-.item_count {
+.item_count,
+.item_countMbl {
   position: absolute;
   top: -10px;
   right: -10px;
@@ -61,4 +65,31 @@
   justify-content: center;
   padding: 4px;
   font-size: 13px;
+}
+
+.navitemMbl {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    min-height: 50px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .logo {
+    margin-left: 5px;
+  }
+  .logo a {
+    font-size: 25px;
+  }
+
+  .navitemMbl {
+    position: relative;
+    display: block;
+    margin-right: 20px;
+  }
 }

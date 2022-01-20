@@ -3,11 +3,17 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
   display: none;
 }
+
+/* ::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 20px;
+} */
 
 a {
   color: inherit;
