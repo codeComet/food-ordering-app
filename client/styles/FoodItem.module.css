@@ -95,15 +95,15 @@
   transition: 300ms;
 }
 
-.sizeItem:hover {
-  background-color: #ff0707;
-  color: white;
-}
-
 .sizeItem:first-child {
   background-color: green;
 }
 
 .sizeItem:last-child {
   background-color: blue;
+}
+
+.sizeItem:hover {
+  background-color: white;
+  color: black;
 }

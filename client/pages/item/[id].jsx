@@ -6,6 +6,7 @@ import { HiPlus, HiMinus } from "react-icons/hi";
 const FoodItem = () => {
   const [count, setCount] = useState(1);
   const [size, setSize] = useState(0);
+  const [price, setPrice] = useState(0);
   const food = {
     name: "BBQ Chicken Burger",
     price: {
@@ -17,7 +18,15 @@ const FoodItem = () => {
 
   useEffect(() => {
     if (count <= 1) setCount(1);
+    if (count >= 10) setCount(10);
+    setPrice(count * food.price.size[size]);
   }, [count]);
+
+  const handleSizeClick = (index) => {
+    setSize(index);
+    setPrice(count * food.price.size[index]);
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
@@ -33,19 +42,28 @@ const FoodItem = () => {
         <div className={styles.foodInfo}>
           <h1>{food.name}</h1>
           <p>{food.description}</p>
-          <p>${food.price.size[size]}</p>
+          <p>${price}</p>
         </div>
         <div className={styles.foodSize}>
           <div className={styles.size}>
             <p>Size</p>
             <div className={styles.sizeContainer}>
-              <div className={styles.sizeItem} onClick={() => setSize(0)}>
+              <div
+                className={styles.sizeItem}
+                onClick={() => handleSizeClick(0)}
+              >
                 <p>Regular</p>
               </div>
-              <div className={styles.sizeItem} onClick={() => setSize(1)}>
+              <div
+                className={styles.sizeItem}
+                onClick={() => handleSizeClick(1)}
+              >
                 <p>Premium</p>
               </div>
-              <div className={styles.sizeItem} onClick={() => setSize(2)}>
+              <div
+                className={styles.sizeItem}
+                onClick={() => handleSizeClick(2)}
+              >
                 <p>Mega</p>
               </div>
             </div>
