@@ -127,8 +127,8 @@
 }
 
 @media screen and (max-width: 600px) {
-  .infoContainer {
-    text-align: center;
+  .imgContainer {
+    flex: auto;
   }
 
   .foodInfo {
@@ -136,6 +136,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
   }
 
   .foodInfo h1 {
@@ -172,6 +173,10 @@
 
   .addOnItem label {
     font-size: 0.9rem;
+  }
+
+  .extrasText {
+    text-align: center;
   }
 
   .qtyContainer {
