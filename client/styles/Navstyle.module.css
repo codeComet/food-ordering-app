@@ -38,10 +38,12 @@
   font-size: 1.1rem;
   font-weight: 500;
   color: white;
+  transition: 300ms;
 }
 
 .navitem:hover {
-  color: #4e4e4e;
+  color: #000;
+  cursor: pointer;
 }
 
 .navitem:last-child {

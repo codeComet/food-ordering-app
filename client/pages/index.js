@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 import Hero from "../components/Hero";
 import Menu from "../components/Menu";
 import Special from "../components/Special";

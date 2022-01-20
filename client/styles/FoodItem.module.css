@@ -64,3 +64,46 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
+.foodInfo p {
+  margin-bottom: 5px;
+}
+
+.size {
+  display: flex;
+  align-items: center;
+}
+
+.sizeContainer {
+  margin-left: 20px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sizeItem p {
+  margin: 0px;
+}
+
+.sizeItem {
+  font-size: 1.2rem;
+  background-color: tomato;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.sizeItem:hover {
+  background-color: #ff0707;
+  color: white;
+}
+
+.sizeItem:first-child {
+  background-color: green;
+}
+
+.sizeItem:last-child {
+  background-color: blue;
+}
