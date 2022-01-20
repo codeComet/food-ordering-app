@@ -4,7 +4,7 @@
   justify-content: space-around;
   background-color: #020221;
   color: white;
-  height: 90vh;
+  flex-wrap: wrap;
 }
 
 .imgContainer {
@@ -34,9 +34,11 @@
 }
 
 .qtyContainer {
+  width: 80%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .qty {
@@ -106,4 +108,83 @@
 .sizeItem:hover {
   background-color: white;
   color: black;
+}
+
+.addOnsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.addOnItem {
+  display: flex;
+  align-items: center;
+  margin-right: 1.2rem;
+}
+
+.extrasText {
+  color: #b5b5b5;
+}
+
+@media screen and (max-width: 600px) {
+  .infoContainer {
+    text-align: center;
+  }
+
+  .foodInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .foodInfo h1 {
+    margin-bottom: 0;
+  }
+
+  .foodInfo p {
+    font-size: 1.1rem;
+    width: 100%;
+  }
+
+  .size {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+
+  .sizeItem {
+    margin: 0px 5px;
+  }
+
+  .addOnItem {
+    flex-direction: column;
+  }
+
+  .addOnsContainer {
+    justify-content: space-around;
+  }
+  .addOnItem {
+    margin-right: 0;
+  }
+
+  .addOnItem label {
+    font-size: 0.9rem;
+  }
+
+  .qtyContainer {
+    margin-top: 2.5rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .qty {
+    flex-direction: column-reverse;
+  }
+
+  .qty p {
+    margin: 20px 0;
+  }
 }

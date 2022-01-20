@@ -14,6 +14,7 @@ const FoodItem = () => {
     },
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, ipsam?",
+    extras: ["Extra cheese", "Extra bacon", "Extra Sauce"],
   };
 
   useEffect(() => {
@@ -46,7 +47,7 @@ const FoodItem = () => {
         </div>
         <div className={styles.foodSize}>
           <div className={styles.size}>
-            <p>Size</p>
+            <p className={styles.extrasText}>Size</p>
             <div className={styles.sizeContainer}>
               <div
                 className={styles.sizeItem}
@@ -67,6 +68,17 @@ const FoodItem = () => {
                 <p>Mega</p>
               </div>
             </div>
+          </div>
+        </div>
+        <div className={styles.addOns}>
+          <p className={styles.extrasText}>Add-ons (charges applicable)</p>
+          <div className={styles.addOnsContainer}>
+            {food.extras.map((item, index) => (
+              <div className={styles.addOnItem} key={index}>
+                <input type="checkbox" id={item} name={item} />
+                <label htmlFor={item}>{item}</label>
+              </div>
+            ))}
           </div>
         </div>
         <div className={styles.buttonContainer}>
