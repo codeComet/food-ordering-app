@@ -16,38 +16,34 @@
 }
 
 .special_container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
   width: 90%;
   margin: 0 auto;
 }
 
-.slider > div:first-child,
-.slider > div:last-child {
+.swiper {
+  height: 430px !important;
+}
+
+.swiper-container {
+  width: 480px;
+  margin: auto;
+}
+
+.soon_container {
+  height: 400px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.slider > div:first-child button,
-.slider > div:last-child button {
-  width: 30px;
-  height: 30px;
-  margin: 0 20px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+@media screen and (min-width: 640px) {
+  .swiper-container {
+    width: 640px;
+  }
 }
 
-.slider > div:first-child button::before {
-  content: "<";
-  font-weight: bold;
-  font-size: 2.5rem;
-}
-
-.slider > div:last-child button::before {
-  content: ">";
-  font-weight: bold;
-  font-size: 2.5rem;
+@media screen and (min-width: 768px) {
+  .swiper-container {
+    width: 768px;
+  }
 }
