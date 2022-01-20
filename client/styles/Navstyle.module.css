@@ -7,6 +7,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  overflow: hidden;
 }
 
 .logo {
@@ -57,8 +58,8 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: red;
-  color: white;
+  background-color: white;
+  color: red;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -71,7 +72,7 @@
   display: none;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   .container {
     min-height: 50px;
   }
@@ -91,5 +92,39 @@
     position: relative;
     display: block;
     margin-right: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navitemMbl {
+    display: none;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .navitem {
+    justify-content: start;
+  }
+
+  .navitem,
+  .num_container {
+    margin: 0px 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navitem,
+  .num_container {
+    margin: 0px 2rem;
+    font-size: 1.2rem;
+  }
+
+  .logo {
+    font-size: 2.5rem;
   }
 }

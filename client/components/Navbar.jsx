@@ -1,6 +1,7 @@
 import styles from "../styles/Navstyle.module.css";
 import { BsTelephoneOutbound } from "react-icons/bs";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 const Navbar = () => {
   return (
@@ -43,13 +44,14 @@ const Navbar = () => {
             <div className={styles.item_count}>2</div>
           </div>
         </div>
-        <div className={styles.navitemMbl}>
-          <MdOutlineShoppingCart
-            style={{ color: "#fff", fontSize: "1.6rem" }}
-          />
-          <div className={styles.item_countMbl}>2</div>
-        </div>
       </>
+      <div className={styles.navitemMbl}>
+        <MdOutlineShoppingCart style={{ color: "#fff", fontSize: "1.6rem" }} />
+        <div className={styles.item_countMbl}>2</div>
+      </div>
+      <div className={styles.navitemMbl}>
+        <HiOutlineMenuAlt3 style={{ color: "#fff", fontSize: "1.6rem" }} />
+      </div>
     </div>
   );
 };
