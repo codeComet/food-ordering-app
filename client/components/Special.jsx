@@ -14,8 +14,7 @@ const Special = () => {
         <h2>Our Specials</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-          euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc, eget
-          consectetur nisl nisi eget.
+          euismod, urna eu tincidunt consectetur, nisi nisl aliquam nunc.
         </p>
       </div>
       <div className={styles.special_container}>
@@ -23,7 +22,6 @@ const Special = () => {
           slidesPerView={1}
           spaceBetween={10}
           pagination={{ clickable: true }}
-          j
           onSwiper={(swiper) => console.log(swiper)}
           breakpoints={{
             640: {

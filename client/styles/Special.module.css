@@ -13,6 +13,7 @@
   width: 70%;
   margin: 10px auto;
   font-size: 1.2em;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .special_container {
@@ -21,7 +22,7 @@
 }
 
 .swiper {
-  height: 430px !important;
+  height: 440px !important;
 }
 
 .swiper-container {
@@ -36,9 +37,14 @@
   justify-content: center;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (max-width: 640px) {
   .swiper-container {
     width: 640px;
+  }
+
+  .special_title p {
+    width: 90%;
+    font-size: 0.9rem;
   }
 }
 

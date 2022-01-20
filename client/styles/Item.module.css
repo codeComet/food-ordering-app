@@ -14,6 +14,15 @@
   -moz-box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.35);
 }
 
+.description {
+  padding: 0px 10px;
+}
+
 .description h3 {
   margin-top: -20px;
+}
+
+.description p {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.8);
 }
