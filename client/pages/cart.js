@@ -61,6 +61,9 @@ const Cart = () => {
               </div>
             </div>
           </div>
+          <div className={styles.orderBtn}>
+            <button>Place order</button>
+          </div>
         </div>
       </div>
     </div>

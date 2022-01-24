@@ -68,6 +68,30 @@
   color: rgb(255, 0, 0);
 }
 
+.orderBtn {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orderBtn button {
+  background-color: yellow;
+  color: #00001b;
+  border: 1px solid #00001b;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 90%;
+  transition: 300ms;
+}
+
+.orderBtn button:hover {
+  background-color: #4b4bff;
+  color: white;
+}
+
 @media screen and (max-width: 600px) {
   .cartTotalContainer {
     width: 90%;
@@ -100,6 +124,10 @@
   .price:last-child p {
     font-size: 1.5rem;
   }
+
+  .orderBtn button {
+    width: 50%;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -124,8 +152,11 @@
   }
 
   .cartTotalContainer {
-    width: 90%;
+    width: 70%;
     padding: 0 1rem;
-    margin: auto;
+  }
+
+  .orderBtn button {
+    width: 70%;
   }
 }
