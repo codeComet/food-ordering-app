@@ -2,6 +2,22 @@ import styles from "../styles/Navstyle.module.css";
 import { BsTelephoneOutbound } from "react-icons/bs";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import {
+  Drawer,
+  ListItemButton,
+  ListItemText,
+  ListItem,
+  ListItemIcon,
+} from "@mui/material";
+import { GiHotMeal } from "react-icons/gi";
+import { BiFoodMenu } from "react-icons/bi";
+import { SiBlogger } from "react-icons/si";
+import { FaRegEnvelope } from "react-icons/fa";
+
+import * as React from "react";
 
 const Navbar = () => {
   return (
@@ -50,10 +66,101 @@ const Navbar = () => {
         <div className={styles.item_countMbl}>2</div>
       </div>
       <div className={styles.navitemMbl}>
-        <HiOutlineMenuAlt3 style={{ color: "#fff", fontSize: "1.6rem" }} />
+        <MobileMenu />
       </div>
     </div>
   );
 };
+
+function MobileMenu() {
+  const [state, setState] = React.useState({
+    right: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (
+      event &&
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  const list = (anchor) => (
+    <Box
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+      style={{
+        backgroundColor: "brown",
+        color: "white",
+        height: "100%",
+        width: "220px",
+      }}
+    >
+      <List>
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon style={{ color: "aliceblue" }}>
+              <BiFoodMenu />
+            </ListItemIcon>
+            <ListItemText primary="Menu" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon style={{ color: "aliceblue" }}>
+              <GiHotMeal />
+            </ListItemIcon>
+            <ListItemText primary="Specials" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon style={{ color: "aliceblue" }}>
+              <SiBlogger />
+            </ListItemIcon>
+            <ListItemText primary="Blog" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton>
+            <ListItemIcon style={{ color: "aliceblue" }}>
+              <FaRegEnvelope />
+            </ListItemIcon>
+            <ListItemText primary="Contact us" />
+          </ListItemButton>
+        </ListItem>
+      </List>
+    </Box>
+  );
+
+  return (
+    <div>
+      {["right"].map((anchor) => (
+        <React.Fragment key={anchor}>
+          <Button onClick={toggleDrawer(anchor, true)}>
+            <div className={styles.navitemMbl}>
+              <HiOutlineMenuAlt3
+                style={{ color: "#fff", fontSize: "1.6rem" }}
+              />
+            </div>
+          </Button>
+          <Drawer
+            anchor={anchor}
+            open={state[anchor]}
+            onClose={toggleDrawer(anchor, false)}
+            onOpen={toggleDrawer(anchor, true)}
+          >
+            {list(anchor)}
+          </Drawer>
+        </React.Fragment>
+      ))}
+    </div>
+  );
+}
 
 export default Navbar;

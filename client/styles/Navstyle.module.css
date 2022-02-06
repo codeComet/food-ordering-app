@@ -74,6 +74,17 @@
   display: none;
 }
 
+.css-1160xiw-MuiPaper-root-MuiDrawer-paper {
+  background-color: brown !important;
+  color: white !important;
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    margin-left: 10px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .container {
     min-height: 50px;
@@ -84,7 +95,7 @@
   }
 
   .logo {
-    margin-left: 5px;
+    margin-left: 15px;
   }
   .logo a {
     font-size: 25px;
@@ -93,7 +104,7 @@
   .navitemMbl {
     position: relative;
     display: block;
-    margin-right: 20px;
+
     cursor: pointer;
     margin-top: 10px;
   }
