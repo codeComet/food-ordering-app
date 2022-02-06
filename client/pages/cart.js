@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/Cart.module.css";
+import Image from "next/image";
 
 const Cart = () => {
   return (
@@ -16,7 +17,14 @@ const Cart = () => {
               <th>Total</th>
             </tr>
             <tr>
-              <td>Jill</td>
+              <td>
+                <Image
+                  src="/img/6.png"
+                  objectFit="contain"
+                  width={100}
+                  height={100}
+                />
+              </td>
               <td>Smith</td>
               <td>50</td>
               <td>50</td>
@@ -24,7 +32,14 @@ const Cart = () => {
               <td>50</td>
             </tr>
             <tr>
-              <td>Eve</td>
+              <td>
+                <Image
+                  src="/img/8.png"
+                  objectFit="contain"
+                  width={100}
+                  height={100}
+                />
+              </td>
               <td>Jackson</td>
               <td>94</td>
               <td>94</td>
@@ -32,7 +47,14 @@ const Cart = () => {
               <td>94</td>
             </tr>
             <tr>
-              <td>Adam</td>
+              <td>
+                <Image
+                  src="/img/9.png"
+                  objectFit="contain"
+                  width={100}
+                  height={100}
+                />
+              </td>
               <td>Johnson</td>
               <td>67</td>
               <td>67</td>

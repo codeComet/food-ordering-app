@@ -1,0 +1,76 @@
+.parent {
+  background-color: #00001b;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  gap: 100px;
+}
+
+.order {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+}
+
+.orderInfo h4 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.orderInfo p {
+  color: rgb(189, 189, 189);
+  font-size: 1.2rem;
+}
+
+.stepper {
+  width: 80%;
+}
+
+.MuiStepLabel-label {
+  color: white !important;
+}
+
+@media screen and (max-width: 600px) {
+  .parent,
+  .order {
+    display: block;
+    padding: 1rem;
+  }
+
+  .stepper {
+    width: 100%;
+  }
+
+  .orderInfo h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+  }
+  .orderInfo p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .orderInfo h4 {
+    font-size: 1.2rem;
+  }
+  .orderInfo p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .orderInfo h4 {
+    font-size: 1.5rem;
+  }
+  .orderInfo p {
+    font-size: 1.2rem;
+  }
+}
