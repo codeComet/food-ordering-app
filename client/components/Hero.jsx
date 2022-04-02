@@ -17,7 +17,7 @@ const Hero = () => {
       setSlide(slide !== 3 ? slide + 1 : 0);
     }
   };
-  console.log(slide);
+  //console.log(slide);
   return (
     <div className={styles.container}>
       <div className={styles.arrow}>
